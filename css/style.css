@@ -78,7 +78,6 @@ a {
   margin-top: 120px;
   float: left;
   font-weight: 400;
-
   color: #24baa0;
 }
 .full_width.black_bg::after {
@@ -100,8 +99,22 @@ a {
 .left_slider {
   margin-top: 20px;
   float: left;
-  width: 45%;
+  width: 40%;
 }
+/*Slider in js*/
+.left_slider {
+  overflow: hidden;
+}
+.slider ul {
+  list-style-type: none;
+}
+.slider li {
+  display: none;
+}
+.slider .visible {
+  display: inline-block;
+}
+
 .right_slider {
   float: left;
   width: 45%;

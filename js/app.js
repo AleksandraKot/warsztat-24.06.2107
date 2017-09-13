@@ -28,5 +28,41 @@ for (var i = 0; i < imgages.length; i++) {
     }
   });
 }
+// Zadanie 3
+
+var buttonNext = document.querySelector(".arrow_right");
+var buttonPrev = document.querySelector(".arrow_left");
+
+var allLiElements = document.querySelectorAll(".slider li");
+var index = 0;
+allLiElements[0].classList.add("visible");
+
+buttonNext.addEventListener("click", function() {
+
+  allLiElements[index].classList.remove("visible");
+  index++;
+  if (index >= allLiElements.length) {
+    index = allLiElements.length - 1;
+  }
+  allLiElements[index].classList.add("visible");
+
+});
+
+buttonPrev.addEventListener("click", function() {
+
+  allLiElements[index].classList.remove("visible");
+  index--;
+  if (index < 0) {
+    index = 0;
+  }
+  allLiElements[index].classList.add("visible");
+
+});
+
+
+
+
+
+
 
 });
