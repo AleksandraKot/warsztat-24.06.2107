@@ -20,19 +20,58 @@
   font-size: 14px;
   color: white;
   padding:  10px 0;
-  display: inline-block;
+  float: left;
 }
 ul {
   float: right;
 }
 ul li {
   float: left;
-  color: white;
+  position: relative;
+
   padding: 10px 20px;
   text-transform: uppercase;
   font-size: 14px;
   list-style: none;
   font-weight: 500;
+  cursor: pointer;
+}
+a {
+  color: white;
+}
+
+
+.dropdown {
+  display: block;
+  z-index: 1;
+}
+.submenu-arrrow {
+  border-bottom: 14px solid black;
+  position: absolute;
+  top: -26%;
+  left: 29%;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-left: 14px solid transparent;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 165%;
+}
+.dropdown-content a {
+  padding: 10px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  min-width: 120px;
+  background-color: black;
+  font-size: 14px;
+  font-weight: 500;
+}
+.show {
+  display: block;
 }
 .arrow_left, .arrow_right {
   font-size: 100px;
@@ -116,15 +155,33 @@ ul li {
 .box2_img {
   background: url("../images/box2_img.jpg") center/cover no-repeat;
 }
+.box1_img .green_line,
+.box2_img .green_line {
+  position: absolute;
+  top: 80%;
+  left: 6%;
+}
 .box1_img span, .box2_img span {
   text-transform: uppercase;
 }
 h1 {
+  display: block;
   position: absolute;
+  width: 329px;
   top: 140px;
-  text-align: center;
+  left: 0px;
+  padding-left: 20px;
+  text-align: left;
   line-height: 60px;
   background-color: rgba(255, 255, 255, 0.5);
+}
+.hide {
+display: none;
+}
+.box_text .green_line {
+  position: absolute;
+  top: 42px;
+  left: 20px;
 }
 .box_text p:first-of-type {
   font-weight: 700;
@@ -134,6 +191,7 @@ h1 {
   margin-top: 20px;
 }
 .box_text {
+  position: relative;
   margin: 10px;
   float: left;
   border: 1px solid black;
@@ -360,17 +418,17 @@ input[type="checkbox"]:checked + label::before {
   content: "";
   display: block;
 }
-footer .container p:first-of-type {
+footer.container p:first-of-type {
   float: left;
   padding: 10px;
   display: inline;
 }
 
-footer .container p:nth-of-type(2) {
+footer.container p:nth-of-type(2) {
   float: right;
   text-transform: uppercase;
   padding: 10px;
-  color: grey;s
+  color: grey;
   font-weight: bold;
   font-size: 20px;
 }
